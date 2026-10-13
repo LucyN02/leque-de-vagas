@@ -1,6 +1,6 @@
 package lequedevagas.demo.service;
 
-import lequedevagas.demo.dto.busca.EstatisticasRespostaDTO;
+import lequedevagas.demo.dto.busca.EstatisticaRespostaDTO;
 import lequedevagas.demo.dto.vaga.VagaRespostaDTO;
 import lequedevagas.demo.repository.CandidaturaRepository;
 import lequedevagas.demo.repository.EmpresaRepository;
@@ -26,13 +26,13 @@ public class BuscaEstatisticasService {
         this.candidaturaRepository = candidaturaRepository;
     }
 
-    public EstatisticasRespostaDTO calcularEstatisticas() {
+    public EstatisticaRespostaDTO calcularEstatisticas() {
         var vagas = vagaRepository.listarTodas();
         int totalEmpresas = empresaRepository.listarTodas().size();
         int totalCandidaturas = candidaturaRepository.listarTodas().size();
         long aceitaIniciante = vagas.stream().filter(v -> Boolean.TRUE.equals(v.getAceitaIniciante())).count();
 
-        return new EstatisticasRespostaDTO(
+        return new EstatisticaRespostaDTO(
                 vagas.size(),
                 totalEmpresas,
                 totalCandidaturas,

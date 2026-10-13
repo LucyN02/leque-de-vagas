@@ -1,6 +1,6 @@
 package lequedevagas.demo.dto.busca;
 
-public record EstatisticasRespostaDTO(
+public record EstatisticaRespostaDTO(
         int totalVagas,
         int totalEmpresas,
         int totalCandidaturas,

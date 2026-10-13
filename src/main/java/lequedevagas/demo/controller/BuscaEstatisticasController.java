@@ -1,6 +1,6 @@
 package lequedevagas.demo.controller;
 
-import lequedevagas.demo.dto.busca.EstatisticasRespostaDTO;
+import lequedevagas.demo.dto.busca.EstatisticaRespostaDTO;
 import lequedevagas.demo.dto.vaga.VagaRespostaDTO;
 import lequedevagas.demo.service.BuscaEstatisticasService;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +20,7 @@ public class BuscaEstatisticasController {
     }
 
     @GetMapping("/estatisticas")
-    public ResponseEntity<EstatisticasRespostaDTO> getEstatisticas() {
+    public ResponseEntity<EstatisticaRespostaDTO> getEstatisticas() {
         return ResponseEntity.ok(service.calcularEstatisticas());
     }
 

@@ -2,6 +2,15 @@
 
 Este projeto é uma API REST em Java com Spring Boot para gerenciar vagas de emprego.
 
+## 👥 Divisão das Frentes de Trabalho
+
+| Frente | Responsável         | Módulo               | Branch Existente | Endpoints |
+| :--- |:--------------------|:---------------------| :--- | :--- |
+| **Frente 1** | Luciana Neves       | Gestão de Vagas      | `feature/frente-1-vaga` | `GET /vagas`, `GET /vagas/{id}`, `POST /vagas`, `PUT /vagas/{id}`, `DELETE /vagas/{id}` |
+| **Frente 2** | Gabriel Mendonça    | Empresas Parceiras   | `feature/frente-2-empresa` | `GET /empresas`, `GET /empresas/{id}`, `POST /empresas` |
+| **Frente 3** | Gabriel Lobão       | Candidaturas         | `feature/frente-3-candidatura` | `POST /pessoas`, `GET /candidaturas`, `POST /candidaturas` |
+| **Frente 4** | Ynara Stanislavovna | Busca & Estatísticas | `feature/frente-4-busca-metricas` | `GET /estatisticas`, `GET /vagas/busca` |
+
 ## Requisitos
 
 - Java 21
